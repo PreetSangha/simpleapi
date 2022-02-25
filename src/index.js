@@ -6,7 +6,7 @@ const port = 3000;
 
 app.get("/", (request, response) => {
     response
-    .json('Home Page - default text');
+    .send('Home Page - default text');
 });
 
 app.listen(port, () => {
