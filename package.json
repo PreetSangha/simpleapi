@@ -4,7 +4,7 @@
   "description": "my first simple api using express",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/index.js"
   },
   "author": "preet sangha",
   "license": "ISC",
