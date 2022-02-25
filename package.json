@@ -4,7 +4,7 @@
   "description": "my first simple api using express",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node index.js"
   },
   "author": "preet sangha",
   "license": "ISC",
