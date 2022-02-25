@@ -1,0 +1,14 @@
+{
+  "name": "simpleapi",
+  "version": "0.0.1",
+  "description": "my first simple api using express",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "preet sangha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
