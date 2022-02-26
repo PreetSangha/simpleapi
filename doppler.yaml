@@ -1,0 +1,3 @@
+setup:
+  project: simpleapi
+  config: dev
