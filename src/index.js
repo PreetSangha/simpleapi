@@ -9,11 +9,58 @@ const express = require("express");
 const app = express();
 
 
-app.get("/", (request, response) => {
-    response
-    .send('Home Page - default text');
+app.get("/*", (request, response) => {
+    
+    logRequest(request);
+
+    response.send('Home Page - default text');
 });
 
+
+
+app.post("/", (request, response) => {
+    
+    logRequest(request);
+
+    response.send('Home Page - default text');
+});
+
+app.post("/write", (request, response) => {
+    
+    logRequest(request);
+
+    response.send('Home Page - default text');
+});
+
+app.post('/event', ()  => {
+    
+    logRequest(request);
+
+    response.send('Home Page - default text');
+});
+
+// Handle any other request
+    // app.use((req, res, next) => {
+    //   logRequest(request);
+    // //     const error = Error("Not found");
+    // //   error.statusCode = 404;
+    // //   next(error);
+    // });
+
+function logRequest(request, verbose = false) {
+
+    console.log(chalk.blueBright(new Date().toLocaleString() + " path: " + request.originalUrl))
+    if(verbose) {
+        console.log(request)
+    }
+    else
+    {
+        // console.log('headers');
+        // console.log(request.headers);
+        console.log(`parameters ${request.parameters}`);
+        console.log(`body ${request.body}`);
+    }
+}
 
 function error (message) {
     console.log(chalk.red(message));
